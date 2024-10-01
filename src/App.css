@@ -1,0 +1,51 @@
+#root {
+  background-color: rgb(24, 24, 24);
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.checkbox {
+  display: none;
+}
+
+label span {
+  display: inline-block;
+  position: relative;
+  height: 2em;
+  width: 2em;
+  background-color: rgba(0, 0, 0, 0);
+  border: 3px solid white;
+  border-radius: 100%;
+  transition: all ease 0.7s;
+}
+
+label {
+  cursor: pointer;
+}
+
+
+label>span::after {
+  content: "";
+  position: absolute;
+  border: solid white;
+  border-width: 0 0.30em 0.30em 0;
+  transform: rotate(45deg);
+  width: 0.50em;
+  height: 1em;
+  left: .54em;
+  top: 0.23em;
+  opacity: 0;
+  transition: .3s ease;
+}
+
+
+label input:checked~span::after {
+  opacity: 1;
+}
+
+input::placeholder{
+  color: white !important;
+  opacity: 1;
+}
